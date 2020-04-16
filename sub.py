@@ -6,10 +6,14 @@ license: CC BY-NC-SA 3.0
 
 import pytz
 import requests
+from time import sleep
+from random import randint
 from datetime import datetime
 
 
 s = requests.Session()
+header = {"User-Agent": "Mozilla/5.0 (Linux; Android 10;  AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045136 Mobile Safari/537.36 wxwork/3.0.16 MicroMessenger/7.0.1 NetType/WIFI Language/zh",}
+s.headers.update(header)
 
 user = "USERNAME"    # sep账号
 passwd = "PASSWORD"   # sep密码
@@ -95,6 +99,10 @@ def message(key, title, body):
 
 if __name__ == "__main__":
     print(datetime.now(tz=pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S %Z"))
+    for i in range(randint(10,600),0,-1):
+        print("\r等待{}秒后填报".format(i),end='')
+        sleep(1)
+
     login(s, user, passwd)
     yesterday = get_daily(s)
     submit(s, yesterday)

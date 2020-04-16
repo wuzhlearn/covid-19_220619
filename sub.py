@@ -99,7 +99,7 @@ def message(key, title, body):
 
 if __name__ == "__main__":
     print(datetime.now(tz=pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S %Z"))
-    for i in range(randint(10,600),0,-1):
+    for i in range(randint(10,60),0,-1):
         print("\r等待{}秒后填报".format(i),end='')
         sleep(1)
 

@@ -94,30 +94,25 @@ def get_daily(s: requests.Session):
 
 def submit(s: requests.Session, old: dict):
     new_daily = {
+        'date': old['date'],
         'realname': old['realname'],
         'number': old['number'],
         'szgj_api_info': old['szgj_api_info'],
         # 'szgj': old['szgj'],# 2021.8.1 del
         # 'old_sfzx': old['sfzx'],# 2021.8.1 del
+        'jjdz':old['jjdz'],
+        'zrzs':old['zrzs'],
         'sfzx': old['sfzx'],
         'szdd': old['szdd'],
         'ismoved': 0,  # 如果前一天位置变化这个值会为1，第二天仍然获取到昨天的1，而事实上位置是没变化的，所以置0
         # 'ismoved': old['ismoved'],
-        'tw': old['tw'],
+        #'tw': old['tw'],
         # 'bztcyy': old['bztcyy'], # 2021.8.1 del
         # 'sftjwh': old['sfsfbh'],  # 2020.9.16 del
         # 'sftjhb': old['sftjhb'],  # 2020.9.16 del
-        'sfcxtz': old['sfcxtz'],
-        # 'sfyyjc': old['sfyyjc'],# 2021.8.1 del
-        # 'jcjgqr': old['jcjgqr'],# 2021.8.1 del
-        # 'sfjcwhry': old['sfjcwhry'],  # 2020.9.16 del
-        # 'sfjchbry': old['sfjchbry'],  # 2020.9.16 del
-        'sfjcbh': old['sfjcbh'],  # 是否接触病患
-        # 'jcbhlx': old['jcbhlx'], # 2021.1.29 del 接触病患类型
-        'sfcyglq': old['sfcyglq'],  # 是否处于隔离期
-        # 'gllx': old['gllx'],   # 2021.1.29 del 隔离类型
-        'sfcxzysx': old['sfcxzysx'],
-        # 'old_szdd': old['szdd'],# 2021.8.1 del
+        'sfzgfx': old['sfzgfx'],
+        'sflzs': old['sflzs'],
+        'jrtw':old['jrtw'],
         'geo_api_info': old['old_city'],  # 保持昨天的结果
         'old_city': old['old_city'],
         'geo_api_infot': old['geo_api_infot'],

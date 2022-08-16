@@ -94,7 +94,7 @@ def get_daily(s: requests.Session):
 
 def submit(s: requests.Session, old: dict):
     new_daily = {
-        'date': old['date'],
+        #'date': old['date'],
         'realname': old['realname'],
         'number': old['number'],
         'szgj_api_info': old['szgj_api_info'],
@@ -113,6 +113,15 @@ def submit(s: requests.Session, old: dict):
         'sfzgfx': old['sfzgfx'],
         'sflzs': old['sflzs'],
         'jrtw':old['jrtw'],
+        'sfzz':old['sfzz'],
+        'nzqk':old['nzqk'],
+        'sfzrhs':old['sfzrhs'],
+        'dyz':old['dyz'],
+        'dyzsj':old['dyzsj'],
+        'dez':old['dez'],
+        'dezsj':old['dezsj'],
+        'dsz':old['dsz'],
+        'dszsj':old['dszsj'],
         'geo_api_info': old['old_city'],  # 保持昨天的结果
         'old_city': old['old_city'],
         'geo_api_infot': old['geo_api_infot'],
@@ -128,12 +137,12 @@ def submit(s: requests.Session, old: dict):
         # 'jcjgt': old['jcjgt'],# 2021.8.1 del
         # 'qksm': old['qksm'],# 2021.8.1 del
         # 'remark': old['remark'],
-        'jcjgqk': old['jcjgqk'],
+        # 'jcjgqk': old['jcjgqk'],
         # 'jcwhryfs': old['jcwhryfs'],# 2021.8.1 del
         # 'jchbryfs': old['jchbryfs'],# 2021.8.1 del
         'gtshcyjkzt': old['gtshcyjkzt'],  # add @2020.9.16
-        'jrsfdgzgfxdq': old['jrsfdgzgfxdq'],  # add @2020.9.16
-        'jrsflj': old['jrsflj'],  # add @2020.9.16
+        # 'jrsfdgzgfxdq': old['jrsfdgzgfxdq'],  # add @2020.9.16
+        # 'jrsflj': old['jrsflj'],  # add @2020.9.16
         'app_id': 'ucas'
     }
 

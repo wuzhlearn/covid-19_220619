@@ -101,7 +101,7 @@ def submit(s: requests.Session, old: dict):
         # 'szgj': old['szgj'],# 2021.8.1 del
         # 'old_sfzx': old['sfzx'],# 2021.8.1 del
         # 'jjdz':old['jjdz'],
-        'zrzs':old['zrzs'],
+        #'zrzs':old['zrzs'],
         'sfzx': old['sfzx'],
         'szdd': old['szdd'],
         'ismoved': 0,  # 如果前一天位置变化这个值会为1，第二天仍然获取到昨天的1，而事实上位置是没变化的，所以置0

@@ -50,9 +50,9 @@ if os.environ.get('GITHUB_RUN_ID', None):
 
 
 def login(s: requests.Session, username, password, cookie_file: Path):
-    # r = s.get(
-    #     "https://app.ucas.ac.cn/uc/wap/login?redirect=https%3A%2F%2Fapp.ucas.ac.cn%2Fsite%2FapplicationSquare%2Findex%3Fsid%3D2")
-    # print(r.text)
+    r = s.get(
+        "https://app.ucas.ac.cn/uc/wap/login?redirect=https%3A%2F%2Fapp.ucas.ac.cn%2Fsite%2FapplicationSquare%2Findex%3Fsid%3D2")
+    print(r.text)
 
     if cookie_file.exists():
         cookie = json.loads(cookie_file.read_text(encoding='utf-8'))
@@ -100,7 +100,7 @@ def submit(s: requests.Session, old: dict):
         'szgj_api_info': old['szgj_api_info'],
         # 'szgj': old['szgj'],# 2021.8.1 del
         # 'old_sfzx': old['sfzx'],# 2021.8.1 del
-        # 'jjdz':old['jjdz'],
+        'jjdz':old['jjdz'],
         #'zrzs':old['zrzs'],
         #'sfzx': old['sfzx'],
         'szdd': old['szdd'],

@@ -100,7 +100,7 @@ def submit(s: requests.Session, old: dict):
         'szgj_api_info': old['szgj_api_info'],
         # 'szgj': old['szgj'],# 2021.8.1 del
         # 'old_sfzx': old['sfzx'],# 2021.8.1 del
-        'jjdz':old['jjdz'],
+        # 'jjdz':old['jjdz'],
         'zrzs':old['zrzs'],
         'sfzx': old['sfzx'],
         'szdd': old['szdd'],

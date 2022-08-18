@@ -102,7 +102,7 @@ def submit(s: requests.Session, old: dict):
         # 'old_sfzx': old['sfzx'],# 2021.8.1 del
         # 'jjdz':old['jjdz'],
         #'zrzs':old['zrzs'],
-        'sfzx': old['sfzx'],
+        #'sfzx': old['sfzx'],
         'szdd': old['szdd'],
         'ismoved': 0,  # 如果前一天位置变化这个值会为1，第二天仍然获取到昨天的1，而事实上位置是没变化的，所以置0
         # 'ismoved': old['ismoved'],
@@ -110,18 +110,18 @@ def submit(s: requests.Session, old: dict):
         # 'bztcyy': old['bztcyy'], # 2021.8.1 del
         # 'sftjwh': old['sfsfbh'],  # 2020.9.16 del
         # 'sftjhb': old['sftjhb'],  # 2020.9.16 del
-        'sfzgfx': old['sfzgfx'],
-        'sflzs': old['sflzs'],
-        'jrtw':old['jrtw'],
-        'sfzz':old['sfzz'],
-        'nzqk':old['nzqk'],
-        'sfzrhs':old['sfzrhs'],
-        'dyz':old['dyz'],
-        'dyzsj':old['dyzsj'],
-        'dez':old['dez'],
-        'dezsj':old['dezsj'],
-        'dsz':old['dsz'],
-        'dszsj':old['dszsj'],
+        #'sfzgfx': old['sfzgfx'],
+        #'sflzs': old['sflzs'],
+        'tw':old['tw'],
+        #'sfzz':old['sfzz'],
+        #'nzqk':old['nzqk'],
+        #'sfzrhs':old['sfzrhs'],
+        #'dyz':old['dyz'],
+        #'dyzsj':old['dyzsj'],
+        #'dez':old['dez'],
+        #'dezsj':old['dezsj'],
+        #'dsz':old['dsz'],
+        #'dszsj':old['dszsj'],
         'geo_api_info': old['old_city'],  # 保持昨天的结果
         'old_city': old['old_city'],
         'geo_api_infot': old['geo_api_infot'],
@@ -185,7 +185,7 @@ def check_submit_data(data: dict):
     #if data['jrsflj'] == '是':
     #    msg.append("近日有离京经历，请手动填报")
 
-    #return ";".join(msg) if msg else None
+    return ";".join(msg) if msg else None
 
 
 def message(key, sender, mail_passwd, receiver, subject, msg):
